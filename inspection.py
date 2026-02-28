@@ -136,9 +136,6 @@ def get_value_at_storage(rpc_provider, address, slot, **kwargs):
         raise RuntimeError(data["error"])
     return (res.json()["result"])
 
-#bytes_object = Bytes32.load_from_hex(get_value_at_storage("https://mainnet.infura.io/v3/dd1a1dee389540579bd4d6c7be152898","0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", 3, type="mapping", key=bytes.fromhex("6b44ba0a126a2A1a8aa6cD1AdeeD002e141Bcd44")))
-#print(bytes_object)
-
 def decode(byte, to):
     if to == "int":
         return int.from_bytes(byte, "big")
